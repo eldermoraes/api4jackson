@@ -1,2 +1,2 @@
 # api4jackson
-A simple lib to give an easier to use API for Jackson (the well know JSON parser and processor)
+A simple API to give an easier way to use Jackson lib's (the well know JSON parser and processor)
