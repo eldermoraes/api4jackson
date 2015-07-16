@@ -17,12 +17,12 @@ import org.codehaus.jackson.map.ObjectMapper;
  */
 public class Api4Jackson {
 
-    public static File getObjectAsJSONFile(Class clazz) {
+    public static File getObjectAsJSONFile(Object object) {
         ObjectMapper mapper = new ObjectMapper();
         File jsonFile = null;
         try {
             jsonFile = File.createTempFile("file", "json");
-            mapper.writeValue(jsonFile, clazz);
+            mapper.writeValue(jsonFile, object);
         } catch (JsonGenerationException ex) {
             ex.printStackTrace();
         } catch (JsonMappingException ex) {
@@ -32,5 +32,21 @@ public class Api4Jackson {
         }
         
         return jsonFile;
+    }
+    
+    public static String getObjectAsJSONString(Object object) {
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonString = null;
+        try {
+            jsonString = mapper.writeValueAsString(object);
+        } catch (JsonGenerationException ex) {
+            ex.printStackTrace();
+        } catch (JsonMappingException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
+        return jsonString;
     }
 }
