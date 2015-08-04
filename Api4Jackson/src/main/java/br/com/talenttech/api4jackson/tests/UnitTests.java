@@ -32,9 +32,13 @@ public class UnitTests {
         
         BufferedReader reader = Files.newBufferedReader(file.toPath(), StandardCharsets.UTF_8);
         List<String> list = reader.lines().flatMap(line -> Stream.of(line)).collect(toList());
-        System.out.println("[File]: " + list);
+        System.out.println("[ObjectAsFile]: " + list);
         
         String jsonString = Api4Jackson.getObjectAsJSONString(listEmp);
-        System.out.println("[String]: " + list);
+        System.out.println("[ObjectAsString]: " + list);
+        
+        System.out.println("[FileAsObject]: " + Api4Jackson.getJSONFileAsObject(file, List.class));
+        
+        System.out.println("[StringAsObject]: " + Api4Jackson.getJSONStringAsObject(jsonString,List.class));
     }
 }
