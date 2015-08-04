@@ -1,6 +1,7 @@
-# api4jackson
+# Api4Jackson
 A simple API to give an easier way to use Jackson lib's (the well know JSON parser and processor)
 
+# How to
 You can use directly the Api4Jackson class as your API:
 
 1) Use "getObjectAsJSONFile" method if you want to convert an object to a JSON file;
