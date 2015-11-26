@@ -1,5 +1,5 @@
 # Api4Jackson
-A simple API to give an easier way to use Jackson lib's (the well know JSON parser and processor)
+A simple API to give an easier way to use Jackson lib's (the well known JSON parser and processor)
 
 # How to
 You can use directly the Api4Jackson class as your API:
